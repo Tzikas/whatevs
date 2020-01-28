@@ -1,0 +1,102 @@
+
+/**MOBILE FIRST*/
+*{
+    margin: 0;
+    padding: 0;
+    transition: all 5s;
+}
+body{
+    background: tomato;
+    /* all: unset; */
+}
+main {
+    height: 2000px;
+    
+}
+
+
+
+nav {
+    background: rgba(73, 158, 255, 0.8);
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    width: 100%;
+}
+
+nav a { /*a tag child inside of nav*/
+    text-decoration: none;
+    background-color: violet;
+}
+
+nav a:nth-child(even){
+    color: yellow;
+}
+
+nav a:hover{ /*psuedo classes*/
+    color: white;
+}
+body > header > nav > a:nth-child(3) { /*speficity first third a tag in the first nav of the first header in the body*/ 
+    color:teal;
+}
+nav a:active{
+    font-size: 20px;
+}
+
+nav, a { /*Both*/
+    padding:5px;
+}
+
+.text {
+    color:white;
+}
+header{
+    
+}
+
+b.text {
+    font-size: 1vw; 
+}
+p.text { /*siblings*/
+    font-size: 2vw;
+}
+i.text {
+    font-size: 3vw;
+}
+
+#thisisanId{
+    color:magenta;
+}
+
+footer{ 
+    /* position: fixed; */
+    /* top: 0; */
+    /* right: 0; */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: black;
+    text-align: center;
+}
+
+/**Desktop*/
+
+@media (min-width: 300px) {
+    body {
+      background-color: chartreuse;
+    }
+
+    #thisisanId{
+        color:blue;
+    }
+  }
+
+  @media (min-width: 500px) {
+    body {
+        background-color:khaki;
+    } 
+    nav a{
+        font-size: 2rem;   
+    }
+  }
+
